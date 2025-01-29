@@ -1,7 +1,7 @@
 # deepseek-r1-ext
 
-This VS Code extension provides a chat interface for the [DeepSeek-R1](https://ollama.com/library/deepseek-r1) model.
-Currently it's using the deepseek-r1:7b distilled version so it can be run on local hardware.
+This VS Code extension provides a chat interface for the [DeepSeek-R1](https://github.com/deepseek-ai/DeepSeek-R1) model. <br />
+Currently it's using the deepseek-r1:7b which is a smaller model distilled from DeepSeek-R1 with better performance so it can be run on local hardware.
 
 ## Features
 
@@ -17,7 +17,7 @@ Currently it's using the deepseek-r1:7b distilled version so it can be run on lo
 ## Installation
 
 - Download and install [Ollama](https://ollama.com/download/windows)
-- Install deepseek-r1-ext-0.0.1.vsix from the root folder
+- Download and install [deepseek-r1-ext-0.0.1.vsix](./deepseek-r1-ext-0.0.1.vsix)
 
 To install a .vsix file in VS Code:
 
@@ -50,6 +50,15 @@ If you want to contribute to this extension or just want to use a different vers
 ```
     npm install ollama
 ```
+- Check full list of models [here](https://ollama.com/library/deepseek-r1)
+- In extension.ts modify this line of code
+  ```
+      const streamResponse = await ollama.chat({
+            model:'deepseek-r1:7b',
+            messages: [{role: 'user', content: prompt}],
+            stream: true
+        });
+  ```
 - Run and Debug extension
 
 ![Run](./img/run.png)
