@@ -26,10 +26,16 @@ Click Views and More Actions...
 Select Install from VSIX...
 or
 
-in your terminal, run the following command:
+in your terminal, run the following commands:
 
 ```
     code --install-extension deepseek-r1-ext-0.0.1.vsix
+```
+
+To make sure the model is downloaded run the following command in the terminal:
+
+```
+    ollama run deepseek-r1:7b
 ```
 
 ## Usage
