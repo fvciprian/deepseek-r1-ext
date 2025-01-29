@@ -60,13 +60,13 @@ function getWebviewContent(): string {
 			<title>Deep Seek R1</title>
 			<style>
 				body { font-family: sans-serif, margin: 1rem; }
-				#prompt { width:100%; box-sizing: border-box; padding: 0.5rem; }
-				#response { border: 1px solid #ccc; padding: 0.5rem; margin-top: 0.5rem; }
+				#prompt { width:100%; box-sizing: border-box; padding: 0.5rem; font-family: sans-serif; font-weight: 500; }
+				#response { border: 1px solid #ccc; padding: 0.5rem; margin-top: 0.5rem; font-size: 14px; font-weight: 500; }
 			</style>
 		</head>
 		<body>
 			<h1>DeepSeek R1 Extension</h1>
-			<textarea id="prompt" rows="3" placeholder="Ask Something"></textarea> <br />
+			<textarea id="prompt" rows="4" placeholder="Ask Something"></textarea> <br />
 			<button id="askBtn">Ask</button>
 			<div id="response"></div>
 			<script>
