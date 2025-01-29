@@ -1,5 +1,3 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import ollama from 'ollama'; // Import ollama API
 
@@ -28,7 +26,8 @@ export function activate(context: vscode.ExtensionContext) {
 					const streamResponse = await ollama.chat({
 						model:'deepseek-r1:7b',
 						messages: [{role: 'user', content: prompt}],
-						stream: true
+						stream: true,
+						keep_alive: 0
 					});
 
 					for await (const part of streamResponse){
@@ -47,7 +46,9 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 // This method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() {
+	
+}
 
 function getWebviewContent(): string {
 	return /*html*/ `
@@ -64,7 +65,7 @@ function getWebviewContent(): string {
 			</style>
 		</head>
 		<body>
-			<h1>Deep Seek R1 Extension</h1>
+			<h1>DeepSeek R1 Extension</h1>
 			<textarea id="prompt" rows="3" placeholder="Ask Something"></textarea> <br />
 			<button id="askBtn">Ask</button>
 			<div id="response"></div>
