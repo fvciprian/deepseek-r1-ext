@@ -1,6 +1,6 @@
-# deepseek-r1-ext README
+# deepseek-r1-ext
 
-This is the README for your extension "deepseek-r1-ext". This extension provides a chat interface using the Deep Seek R1 model.
+This extension provides a chat interface using the Deep Seek R1 model.
 
 ## Features
 
